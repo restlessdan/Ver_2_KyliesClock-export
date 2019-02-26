@@ -1,0 +1,81 @@
+<svg> 
+  <image id="background" class="WatchFace" href="ClockFace.png" class="background" />
+
+  <text id="steps-data" class="steps-data" x="64" y="190" font-size="24">--</text>
+  
+  <arc x="40" y="130" width="50" height="50" fill="gray"
+    arc-width="5" start-angle="250" sweep-angle="225" />
+  <arc id="steps_arc" x="40" y="130" width="50" height="50" fill="cyan"
+    arc-width="5" start-angle="250"/>
+  
+  <text id="hrm-data" class="sensor-data" x="48%" y="280" font-size="26">--</text>
+  
+  <text id="temperature" class="weather-text" x="50%" text-anchor="middle" y="20%" font-size="26"/> 
+  <text id="description" class="weather-text" x="50%" text-anchor="middle" y="26%" font-size="18"/>
+ 
+  <image class="heartIcon" x="40%" y="263" width="6%" height="6%" href="heart.png" load="sync"/>
+  <image class="stepsIcon" x="55" y="145" width="6%" height="6%" href="steps.png" load="sync"/>
+
+  <rect height="33" width="74" x="65%" y="45%" fill="white" opacity="0.75"/>
+  <text id="day" class="day" x="66%" y="53%" font-size="18"/>
+  <rect height="28" width="2" x="80%" y="46%" fill="black"/>
+  <text id="date" class="date" x="82%" y="53%" font-size="18"/>
+    
+  <defs>
+    <section>
+      <symbol id="sec-hand">
+        
+        <line x1="0" y1="-30" x2="0" y2="140" stroke-width="4"/>
+      </symbol>
+      <symbol id="mins">
+
+      </symbol>
+      <symbol id="hours">
+
+      </symbol>
+      <symbol id="center-dot">
+        <circle r="8" fill="#F5F5F5"/>
+        <circle r="4" fill="fb-dark-gray"/>
+      </symbol>
+    </section>
+      
+    <symbol id="clock-widget" class='clock-widget' type='clock-widget'
+        focusable='false' pointer-events='visible' system-events='all' width='300' height='300' data-size='16'/>
+  </defs>
+  
+    <use id="analog-watch-hands" href='#clock-widget' x='0' y='0' >
+    <g transform="translate(50%,50%)">
+      
+      <g id="mins">
+        <use href="#min-hand" class="min-hand" />
+         <image x="-5" y="-145" id="min-hand" href="MinHand.png" fill="white" /> 
+      </g>
+      <g id="hours">
+        <use href="#hour-hand" class="hour-hand" />
+         <image x="-5" y="-120" id="hour-hand" href="HourHand.png" fill="white" /> 
+      </g>
+      <g id="dot">
+        <use href="#center-dot" class="center-dot" />
+      </g>
+      <g id="second-hand">
+        <use href="#sec-hand" class="sec-hand" />
+      </g>
+    </g>
+  </use>
+
+<!--
+  <g id="mins" class="mins" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-3" y="-110" width="7" height="110" id="hour-hand"/>
+    <g transform="rotate(45)">
+    <rect id="hour-hnd" x="-80" y="-80" width="7" height="7" />
+  </g>
+  </g>
+  <g id="hours" class="hours" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-4" y="-75" width="9" height="75" id="min-hand"/>
+  </g>  
+  <!--<g id="secs" pointer-events="visible" transform="translate(50%,50%)">
+    <rect x="$-2" y="-120" width="4" height="150" fill="#f8e5e7" />
+  </g>-->
+  <circle cx="50%" cy="50%" r="10" fill="#444444" />
+ 
+</svg>

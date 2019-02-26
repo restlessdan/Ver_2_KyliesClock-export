@@ -1,0 +1,54 @@
+#background {
+  fill: white;
+  opacity: 1;
+}
+
+.weather-text {
+  font-family: System-Regular;
+  fill: white;
+  text-anchor: middle;
+  text-length: 32;
+}
+
+.sec-hand {
+  y: -105;
+  fill: white;
+}
+
+.day{
+  font-family: System-Regular;
+  fill: black;
+  text-anchor: start;
+  text-length: 3;
+}
+
+.date{
+  font-family: System-Regular;
+  fill: black;
+  text-anchor: start;
+  text-length: 2;
+}
+
+.steps-data {
+  font-family: System-Regular;
+  fill: white;
+  text-anchor: middle;
+  text-length: 10;
+}
+
+.sensor-data {
+  font-family: System-Regular;
+  fill: white;
+  text-anchor: start;
+  text-length: 10;
+}
+
+.heartIcon{
+  fill: red; 
+  opacity: 1;
+}
+
+.stepsIcon{
+  fill: cyan;
+  opacity: 1;
+}
